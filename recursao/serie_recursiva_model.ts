@@ -4,6 +4,7 @@
 **
 ** Autor: Fabrício G. M. De carvalho, DSc*/
 
+
 class SerieNumericaFinita{
     a0:number;
     dif: number;
