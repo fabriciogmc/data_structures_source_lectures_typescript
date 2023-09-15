@@ -29,7 +29,7 @@ class SerieNumericaFinita{
                 return this.a0;
             }
             else{
-                this.cache[n] = this.dif + this.termo_sequencia(n-1); 
+                this.cache[n] = this.dif + this.termo_sequencia_c(n-1); 
                 return this.cache[n];
             }              
 
