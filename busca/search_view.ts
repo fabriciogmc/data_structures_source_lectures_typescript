@@ -1,4 +1,4 @@
-/* Sequential search execution examples
+/* Sequential and binary search usage examples.
 **
 ** Author: Fabricio Galende M. de Carvalho, DSc.
 */

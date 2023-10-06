@@ -1,5 +1,5 @@
-/* A basic sequential search algorithm 
-** implementation in TS
+/* Basic sequential and binary search
+** algorithms implemented in TypeScript
 **
 ** Author: Fabrício Galende M. de Carvalho, DSc
 */
