@@ -22,42 +22,44 @@ class StringSearch{
         return shifts;   
     }
 
-    /*auxiliary function that is used to determine
+    /* auxiliary function used to create 
+    ** pattern mapping that is used to determine
     ** the jump step */
-    bad_char(c: string):any{
+    build_char_map(pattern: string):any{
         let char_map:any = {}
-        for(let i:number=0; i<c.length; ++i){
-            char_map[c.charAt(i)] = i;
+        for(let i:number=0; i<pattern.length; ++i){
+            char_map[pattern.charAt(i)] = i;
         }
-        return char_map;
+        return char_map;        
     }
+
 
     boyer_moore(pattern: string, text: string):number[]{
         let diff = text.length - pattern.length;
-        let char_map:any = this.bad_char(pattern);
+        let char_map:any = this.build_char_map(pattern);
         let shifts:number[] = []
-        let pos = 0;
-        while (pos <= diff){
+        let shift:number = 0; //pattern displacement
+        while ( shift <= diff){
             let matched:boolean = true;
             let i = pattern.length-1;
-            console.log("Position shift:....", pos);
+            console.log("Position shift:....", shift);
             while(i>=0){
-                if(pattern.charAt(i)!= text.charAt(i+pos)){ //char mismatch
+                if(pattern.charAt(i)!= text.charAt(i+shift)){ //char mismatch
                     matched = false;
                     break;
                 }
                 --i;
             }
             if(matched){
-                shifts.push(pos)
-                ++pos;
+                shifts.push(shift)
+                ++shift;
             } else {
-                if(char_map[text.charAt(i+pos)]!= undefined){
-                    (i-char_map[text.charAt(i+pos)]>1)?
-                        pos= pos+(i-char_map[text.charAt(i+pos)]):
-                        ++pos;
+                if(char_map[text.charAt(i+shift)]!= undefined){
+                    (i-char_map[text.charAt(i+shift)]>1)?
+                        shift= shift+(i-char_map[text.charAt(i+shift)]):
+                        ++shift;
                 } else 
-                    pos = pos+pattern.length;                 
+                    shift += (i+1);                 
             }            
         }
         return shifts;        

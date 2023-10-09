@@ -19,5 +19,5 @@ console.log(`Occurrence indices for ${pattern_1}: `, str_search.trivial(pattern_
 console.log(`Occurrence indices for ${pattern_2}: `, str_search.trivial(pattern_2,text));
 console.log(`Occurrence indices for ${pattern_3}: `, str_search.trivial(pattern_3,text));
 
-console.log(str_search.bad_char("fabricio"));
+console.log(str_search.build_char_map("fabricio"));
 console.log(`Occurrence indices for ${pattern_1}: `, str_search.boyer_moore(pattern_1,text));

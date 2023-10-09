@@ -41,7 +41,7 @@ class Search<T>{
         
     binary(e:T, v:T[]):number{
         let start = 0;
-        let end = v.length;
+        let end = v.length-1;
         let middle = Math.floor((start + end)/2);
         while( start <= end ){
             if (v[middle] == e){

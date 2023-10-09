@@ -13,7 +13,7 @@ let v2: string[] = ['joão', 'fabricio',
                    'thales', 'fabíola'];
 
                    
-console.log(s_string.sequential('fabricio',v2));
+console.log(s_string.sequential('fabíola',v2));
 console.log(s_string.sequential('eduardo',v2));
 
 console.log("Unordered numerical vector: ", v1)
