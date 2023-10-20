@@ -25,8 +25,8 @@ console.log("Unordered numerical vector (after sentinel): ", v1);
 
 /* Vector used to test binary search. It must
 ** be an ordered vector*/
-let v_ord = [2, 4, 6, 8, 10, 12, 14, 16, 18];
-console.log("Binary search (found):", s_number.binary(16,v_ord))
+let v_ord = [1, 3, 6, 9, 12, 15];
+console.log("Binary search (found):", s_number.binary(15,v_ord))
 console.log("Binary search recursive (found):", s_number.binary_r(16,v_ord,0, v_ord.length-1));
 
 
