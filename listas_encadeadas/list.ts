@@ -27,12 +27,36 @@ class List<T>{
         ++ this.length;
     }
 
+    remove(v:T):boolean{
+        let current_node = this.start;
+        let previous_node = {} as MyNode<T>;
+        let found = false;
+        while( Object.keys(current_node).length!= 0 && !found){ 
+            if( current_node.value == v){
+                found = true;
+                if(Object.keys(previous_node).length!= 0){
+                    previous_node.next = current_node.next;                   
+                } else {
+                    this.start = current_node.next;
+                }
+                --this.length;
+            } else {
+                previous_node = current_node;
+                current_node = current_node.next;
+            }            
+        }
+        return found;
+    }
+
     print(){
         let current_node = this.start;
+        process.stdout.write("[");
         while(Object.keys(current_node).length != 0){ //Object is not empty
-            console.log("Value: ", current_node.value);
+            process.stdout.write(String(current_node.value)+ ", ");
             current_node = current_node.next;
         }
+        process.stdout.write("]");
+        process.stdout.write("\n")
     }
 }
 
