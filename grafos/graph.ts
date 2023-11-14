@@ -29,11 +29,12 @@ class Graph{
             }
         }
     }
-    get_connected_vertices(vertice: string){
-        let connected_nodes = new Set<string>();
+    get_connected_vertices(vertice: string):any{
+        let connected_nodes:any = {};
         for(let i=0; i< this.vertices.size; ++i){
             if (this.adj_matrix[this.vertice_2_index[vertice]][i] != 0){
-                connected_nodes.add(this.index_2_vertice[i]);
+                connected_nodes[this.index_2_vertice[i]] = this.adj_matrix[this.vertice_2_index[vertice]][i];
+                
             } 
         }
         return connected_nodes;

@@ -17,12 +17,17 @@ console.log(g.adj_matrix);
 console.log(g.vertices);
 
 
-
 g.connect_vertices("jac","sti", 35);
 g.connect_vertices("sjc", "jac", 15);
 g.connect_vertices("sjc", "tbt", 43);
 g.connect_vertices("sjc", "mlo", 40);
 console.log("\n");
 g.print();
+
+g.vertices.forEach((city)=>{
+    console.log("Nodes connected to ", city, " : ", g.get_connected_vertices(city));
+});
+
+
 
 
