@@ -1,4 +1,4 @@
-<h1> Algoritmos e estruturas de dados utilizando  TypeScript</h1>
+<h1> Exemplos básicos de algoritmos e estruturas de dados utilizando  TypeScript</h1>
 <h2> Autor: Fabrício Galende Marques de Carvalho, DSc </h2>
 
 Observações: 
