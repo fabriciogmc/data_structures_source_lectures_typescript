@@ -13,3 +13,6 @@ console.log("Quick sort detailed view: ");
 ordered_array = quick_sort.sort_view(my_array_avg);
 console.log("Final ordered array: [", ...ordered_array ,"]")
 
+console.log("Original array (b): [", ... my_array_avg, "]");
+ordered_array = quick_sort.sort_b(my_array_avg);
+console.log("Final ordered array (b): [", ...ordered_array ,"]")
